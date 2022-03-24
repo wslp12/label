@@ -1,0 +1,13 @@
+# 의존성 모듈
+/node_modules
+
+
+# 빌드 결과물
+/dist-electron-renderer
+/dist-electron-main
+/dist-electron
+
+# 환경설정
+.DS_Store
+.env.*
+.env-cmdrc*

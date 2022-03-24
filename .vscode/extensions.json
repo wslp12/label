@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "simonsiefke.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "exodiusstudios.comment-anchors",
+    "editorconfig.editorconfig"
+  ],
+  "unwantedRecommendations": []
+}
