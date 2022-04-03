@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -73,9 +71,10 @@ module.exports = {
         use: 'ts-loader',
       },
       {
-        include: [path.resolve(__dirname, 'src')],
-        test: /\.css$/,
-        exclude: /node_modules/,
+        // include: [path.resolve(__dirname, 'src')],
+        // test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
+        // exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
       {
