@@ -17,8 +17,20 @@ import {
 
 function Header() {
   return (
-    <div>
-      <Navbar color="light" expand="md" light>
+    <div
+      style={{
+        height: '100%',
+      }}
+    >
+      <Navbar
+        // color="light"
+        expand="md"
+        light
+        style={{
+          height: '100%',
+          // backgroundColor: 'white',
+        }}
+      >
         <NavbarBrand>
           <Link to="/">reactstrap</Link>
         </NavbarBrand>
@@ -49,7 +61,7 @@ function Header() {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>로그인/회원가입</NavbarText>
         </Collapse>
       </Navbar>
     </div>

@@ -6,16 +6,17 @@ import Lnb from '../../organisms/Lnb';
 
 function Main() {
   return (
-    <Grid gc="1fr 1ft 1ft" gr="15% 1fr 1fr">
-      <Cell c="1/4">
+    <Grid gc="10% 1fr 1fr" gr="13% 1fr 1fr 10%">
+      <Cell c="2/4">
         <Header />
       </Cell>
-      <Cell r="2/4">
+      <Cell r="1/5">
         <Lnb />
       </Cell>
       <Cell c="2/4" r="2/4">
         maincontent
       </Cell>
+      <Cell c="2/4">Foot</Cell>
     </Grid>
   );
 }

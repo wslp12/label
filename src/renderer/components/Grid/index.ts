@@ -1,3 +1,3 @@
-import BaseGrid from './BaseGrid';
+import Grid from './Grid';
 
-export default BaseGrid;
+export default Grid;
