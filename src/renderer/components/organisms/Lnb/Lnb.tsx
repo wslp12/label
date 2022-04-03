@@ -7,7 +7,7 @@ function Lnb() {
     <Flex fd="column">
       <Link to="board">자유 게시판</Link>
       <Link to="qna">질문 게시판</Link>
-      <Link to="qna">토론 게시판</Link>
+      <Link to="discuss">토론 게시판</Link>
     </Flex>
   );
 }
