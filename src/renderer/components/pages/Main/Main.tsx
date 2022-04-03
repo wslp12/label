@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '../../Grid';
 import Cell from '../../Cell/Cell';
 import Header from '../../organisms/Header';
+import Lnb from '../../organisms/Lnb';
 
 function Main() {
   return (
@@ -9,7 +10,9 @@ function Main() {
       <Cell c="1/4">
         <Header />
       </Cell>
-      <Cell r="2/4">lnb</Cell>
+      <Cell r="2/4">
+        <Lnb />
+      </Cell>
       <Cell c="2/4" r="2/4">
         maincontent
       </Cell>
