@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Grid from '../../Grid';
 import Cell from '../../Cell/Cell';
 import Header from '../../organisms/Header';
@@ -14,7 +15,7 @@ function Main() {
         <Lnb />
       </Cell>
       <Cell c="2/4" r="2/4">
-        maincontent
+        <Outlet />
       </Cell>
       <Cell c="2/4">Foot</Cell>
     </Grid>

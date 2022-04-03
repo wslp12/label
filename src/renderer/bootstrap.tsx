@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import Board from './components/pages/Board';
+import Main from './components/pages/Main';
 
 const id = 'root';
 const rootElem = document.getElementById(id);
@@ -12,7 +14,10 @@ if (rootElem) {
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
-          <Route path="*" element={<App />} />
+          <Route path="/" element={<Main />}>
+            <Route path="/board" element={<Board />} />
+          </Route>
+          <Route path="*" element={<Main />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>,
