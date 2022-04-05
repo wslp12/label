@@ -6,7 +6,6 @@ const packJson = require('./package.json');
 const { ModuleFederationPlugin } = webpack.container;
 
 const { target, mode, host } = process.env;
-console.log(host);
 
 const entry =
   target === 'electron-main'
