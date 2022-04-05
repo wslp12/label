@@ -59,6 +59,8 @@
     "arrow-body-style": 0,
     "max-len": "off",
     "jsx-a11y/click-events-have-key-events": 0, // NOTE 장애인을 위한 키 이벤트 필수 바인딩
-    "jsx-a11y/no-static-element-interactions": 0 // NOTE HTML role
+    "jsx-a11y/no-static-element-interactions": 0, // NOTE HTML role
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
   }
 }
