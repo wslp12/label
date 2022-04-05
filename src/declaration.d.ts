@@ -1,7 +1,11 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      loaMode: 'development' | 'production';
+      loa: {
+        host: string;
+        mode: 'dev';
+      };
+      // loa_host: string;
     }
   }
 }
