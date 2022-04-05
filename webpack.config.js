@@ -5,7 +5,8 @@ const packJson = require('./package.json');
 
 const { ModuleFederationPlugin } = webpack.container;
 
-const { target, mode } = process.env;
+const { target, mode, host } = process.env;
+console.log(host);
 
 const entry =
   target === 'electron-main'
@@ -14,8 +15,9 @@ const entry =
 
 const plugins = [
   new webpack.DefinePlugin({
-    'process.env.loaMode': JSON.stringify({
+    'process.env.loa': JSON.stringify({
       mode,
+      host,
     }),
   }),
   new ModuleFederationPlugin({
@@ -58,6 +60,12 @@ module.exports = {
     hot: true,
     liveReload: true,
     historyApiFallback: true,
+    static: [
+      {
+        directory: path.join(__dirname, 'mocks'),
+        publicPath: '/mocks',
+      },
+    ],
   },
   module: {
     rules: [
