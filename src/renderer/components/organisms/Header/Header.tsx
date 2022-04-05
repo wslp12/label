@@ -31,18 +31,11 @@ function Header() {
           // backgroundColor: 'white',
         }}
       >
-        <NavbarBrand>
-          <Link to="/">reactstrap</Link>
-        </NavbarBrand>
         <NavbarToggler />
         <Collapse navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink to="/components/">
-                <Link to="components" type="button">
-                  asdf
-                </Link>
-              </NavLink>
+              <NavLink to="/components/">asdf</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="https://github.com/reactstrap/reactstrap">
@@ -53,7 +46,7 @@ function Header() {
               <DropdownToggle caret nav>
                 Options
               </DropdownToggle>
-              <DropdownMenu right>
+              <DropdownMenu end>
                 <DropdownItem>Option 1</DropdownItem>
                 <DropdownItem>Option 2</DropdownItem>
                 <DropdownItem divider />
