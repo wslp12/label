@@ -5,22 +5,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Board from './components/pages/Board';
 import Main from './components/pages/Main';
+import WriteForm from './components/pages/WriteForm';
 
 const id = 'root';
 const rootElem = document.getElementById(id);
 if (rootElem) {
   const root = ReactDOM.createRoot(rootElem);
   root.render(
-    <React.StrictMode>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />}>
-            <Route path="/board" element={<Board />} />
-          </Route>
-          <Route path="*" element={<Main />} />
-        </Routes>
-      </BrowserRouter>
-    </React.StrictMode>,
+    // <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route path="/board" element={<Board />} />
+          <Route path="/write/:boardName" element={<WriteForm />} />
+          <Route path="*" element={<div>404 not found</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>,
+    // </React.StrictMode>,
   );
 } else {
   console.log(

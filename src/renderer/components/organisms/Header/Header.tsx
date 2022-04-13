@@ -1,28 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+
+import { useNavigate, matchPath, useLocation, NavLink } from 'react-router-dom';
+// import { matchPath } from 'react-router';
+
 import {
-  Collapse,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
+  Button,
+  ButtonGroup,
   Nav,
-  Navbar,
-  NavbarBrand,
-  NavbarText,
-  NavbarToggler,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
+  NavLink as StrapNavLink,
 } from 'reactstrap';
 
 function Header() {
+  // const [activeName, setActvieName] = useState('board');
+  const nav = useNavigate();
+  const location = useLocation();
+
   return (
     <div
       style={{
         height: '100%',
+        paddingTop: '5px',
+        cursor: 'pointer',
       }}
     >
-      <Navbar
+      {/* <Nav
+        tabs
         // color="light"
         expand="md"
         light
@@ -30,33 +33,61 @@ function Header() {
           height: '100%',
           // backgroundColor: 'white',
         }}
-      >
-        <NavbarToggler />
-        <Collapse navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink to="/components/">asdf</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown inNavbar nav>
-              <DropdownToggle caret nav>
-                Options
-              </DropdownToggle>
-              <DropdownMenu end>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>로그인/회원가입</NavbarText>
-        </Collapse>
-      </Navbar>
+      > */}
+      {/* <NavbarToggler /> */}
+      {/* <Collapse navbar> */}
+      <Nav className="me-auto" tabs>
+        <NavItem>
+          <NavLink
+            to="/board"
+            className={(data) => `nav-link ${data.isActive ? 'active' : ''}`}
+          >
+            자유 게시판
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            to="/qna"
+            className={(data) => `nav-link ${data.isActive ? 'active' : ''}`}
+          >
+            질문 게시판
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            to="/discuss"
+            className={(data) => `nav-link ${data.isActive ? 'active' : ''}`}
+          >
+            토론 게시판
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink
+            to="/share"
+            className={(data) => `nav-link ${data.isActive ? 'active' : ''}`}
+          >
+            공유 게시판
+          </NavLink>
+        </NavItem>
+        <NavItem
+          style={{
+            position: 'absolute',
+            right: '10px',
+          }}
+        >
+          <ButtonGroup>
+            <Button size="sm" color="primary">
+              로그인
+            </Button>
+            <Button size="sm" color="success">
+              회원가입
+            </Button>
+          </ButtonGroup>
+        </NavItem>
+      </Nav>
+
+      {/* </Collapse>
+      </Nav> */}
     </div>
   );
 }

@@ -25,6 +25,7 @@ const plugins = [
     remotes: {
       // 'tsremote1-mf': 'tsremote1@http://localhost:9000/remoteEntry.js',
       cc: 'tscc@http://localhost:9000/remoteEntry.js',
+      editor: 'fEditor@http://localhost:9092/remoteEntry.js',
     },
     exposes: {},
     // shared: packJson.dependencies,
